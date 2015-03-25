@@ -11,10 +11,9 @@ import java.sql.Date;
 @Entity
 @Table(name = "A00057006_Employee")
 @NamedQueries({
-        @NamedQuery(name = "Employees.getEmployee", query = "select e from Employee e where :id = e.id")
+        @NamedQuery(name = "Employee.getEmployeeById", query = "select e from Employee e where e.id = :id")
 })
 public class Employee {
-
     @Id
     @NotNull
     @Pattern( regexp = "^[Aa]0[0-9]{7}")
